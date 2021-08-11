@@ -8,5 +8,12 @@ module.exports = {
         return res.render('index', {
             menu
         })
+    },
+    detalle : (req, res) => {
+        let item = menu.find(item => item.id === +req.params.id);
+        return res.render('detalleMenu', {
+            item
+        })
     }
 }
+
